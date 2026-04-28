@@ -1,0 +1,26 @@
+create repository (A06-p) in github
+
+in local create branch f01 f02 f03 f04 f05 
+checkout to f01 create sample01.txt 
+checkout to f02 create sample02.sh 
+checkout to f03 merge branch from f01 and f02 
+rebase branch from f03 to f04
+
+create t1.txt insert 10 command lines and 1st commit it
+	
+insert 10 command lines and 2nd commit it
+
+creat t2.txt some files for test in t2.txt inser some more lines in t1.txt
+
+commit both file changes into single commit
+use cheery-pick commnad one by one in master branch
+
+find the commands and use for below
+command to delete branch in local and git hub 
+stash 
+squash 
+.gitignore 
+gittag 
+revert 
+reset
+

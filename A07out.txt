@@ -1,0 +1,261 @@
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch
+  f01
+  f02
+  f03
+  f04
+  f05
+* main
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push -u origin main
+Username for 'https://github.com': pradeesh2007
+Password for 'https://pradeesh2007@github.com': 
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push -u origin f01
+Username for 'https://github.com': pradeesh2007
+Password for 'https://pradeesh2007@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 249 bytes | 249.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'f01' on GitHub by visiting:
+remote:      https://github.com/Pradeesh2007/A06-p/pull/new/f01
+remote: 
+To https://github.com/Pradeesh2007/A06-p.git
+ * [new branch]      f01 -> f01
+branch 'f01' set up to track 'origin/f01'.
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git config --global credential.helper store
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push -u origin f02
+Username for 'https://github.com': pradeesh2007
+Password for 'https://pradeesh2007@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 255 bytes | 255.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'f02' on GitHub by visiting:
+remote:      https://github.com/Pradeesh2007/A06-p/pull/new/f02
+remote: 
+To https://github.com/Pradeesh2007/A06-p.git
+ * [new branch]      f02 -> f02
+branch 'f02' set up to track 'origin/f02'.
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push -u origin f03
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 261 bytes | 261.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'f03' on GitHub by visiting:
+remote:      https://github.com/Pradeesh2007/A06-p/pull/new/f03
+remote: 
+To https://github.com/Pradeesh2007/A06-p.git
+ * [new branch]      f03 -> f03
+branch 'f03' set up to track 'origin/f03'.
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push -u origin f04
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 763 bytes | 763.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'f04' on GitHub by visiting:
+remote:      https://github.com/Pradeesh2007/A06-p/pull/new/f04
+remote: 
+To https://github.com/Pradeesh2007/A06-p.git
+ * [new branch]      f04 -> f04
+branch 'f04' set up to track 'origin/f04'.
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push -u origin f05
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'f05' on GitHub by visiting:
+remote:      https://github.com/Pradeesh2007/A06-p/pull/new/f05
+remote: 
+To https://github.com/Pradeesh2007/A06-p.git
+ * [new branch]      f05 -> f05
+branch 'f05' set up to track 'origin/f05'.
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch
+  f01
+  f02
+  f03
+  f04
+  f05
+* main
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch -D f01 f02 f03 f04 f05
+Deleted branch f01 (was b619e57).
+Deleted branch f02 (was 397c78e).
+Deleted branch f03 (was 084eab3).
+Deleted branch f04 (was 2fa8ac0).
+Deleted branch f05 (was f36feec).
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push --delete origin f01
+To https://github.com/Pradeesh2007/A06-p.git
+ - [deleted]         f01
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push --delete origin f02
+To https://github.com/Pradeesh2007/A06-p.git
+ - [deleted]         f02
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push --delete origin f03
+To https://github.com/Pradeesh2007/A06-p.git
+ - [deleted]         f03
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push --delete origin f04
+To https://github.com/Pradeesh2007/A06-p.git
+ - [deleted]         f04
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push --delete origin f05
+To https://github.com/Pradeesh2007/A06-p.git
+ - [deleted]         f05
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch
+* main
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ nano a07.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git add .
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -m "a07 first commit"
+[main 1de0c77] a07 first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a07.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ echo "2nd line" >> a07.txt 
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ cat a07.txt 
+content in 1st line
+2nd line
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git add .
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -m "2nd commit in a07"
+[main 30dae1b] 2nd commit in a07
+ 1 file changed, 1 insertion(+)
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git log --oneline
+30dae1b (HEAD -> main) 2nd commit in a07
+1de0c77 a07 first commit
+bfd1c13 (origin/main) fill
+9ab7e13 3rd commit
+e0bc375 2st commit
+02a2606 1st commit
+f36feec Add file to create branch
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git rebase -i HEAD~2
+[detached HEAD 089e041] new combined commit
+ Date: Wed Apr 8 00:04:32 2026 +0530
+ 1 file changed, 2 insertions(+)
+ create mode 100644 a07.txt
+Successfully rebased and updated refs/heads/main.
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git log --oneline
+089e041 (HEAD -> main) new combined commit
+bfd1c13 (origin/main) fill
+9ab7e13 3rd commit
+e0bc375 2st commit
+02a2606 1st commit
+f36feec Add file to create branch
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ echo "third line" >> a07.txt 
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git stash
+Saved working directory and index state WIP on main: 089e041 new combined commit
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git stash list
+stash@{0}: WIP on main: 089e041 new combined commit
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git stash apply stash@{0}
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   a07.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git stash drop stash@{0}
+Dropped stash@{0} (24430d829e6cf3bd43766299e75130a71080783b)
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git stash
+Saved working directory and index state WIP on main: 089e041 new combined commit
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git stash pop stash@{0}
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   a07.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped stash@{0} (95922d932f00173b7d7935c3bc20f11f6ba2b13d)
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git stash list
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ nano .gitignore
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ touch demo.py demo.php demo.sh
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ ls
+a07.txt  demo.php  demo.py  demo.sh  sam.txt  t1.txt  t2.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ cat .gitignore 
+.gitignore
+demo.sh
+demo.php
+demo.py
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   a07.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -am "save 3rd line commit"
+[main 175b4b2] save 3rd line commit
+ 1 file changed, 1 insertion(+)
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git tag -a v1.0 -m "First release"
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git push origin v1.0
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 826 bytes | 826.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Pradeesh2007/A06-p.git
+ * [new tag]         v1.0 -> v1.0
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git tag -d v1.0
+Deleted tag 'v1.0' (was e9fb8d9)
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ 

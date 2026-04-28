@@ -1,0 +1,263 @@
+1. Commend to delete the branch in local: git branch -d <branchName>
+					  git 
+
+
+Histoy:
+
+1.        git init
+2.        touch sam.txt
+3.        git add .
+4.        git commit -m"Add file to create branch"
+5.        git branch f01
+6.        git branch f02
+7.        git branch f03
+8.        git branch f04
+9.        git branch f05
+10.        git checkout f01
+11.        touch sam01.txt
+12.        git add .
+13.        git commit -m "sam file created in f01"
+14.        git checkout f02
+15.        touch sam02.sh
+16.        git add .
+17.        git commit -m "sam file created in f02"
+18.        git checkout f03
+19.        git merge f01
+20.        git log
+21.        git merge f02
+22.        ls
+23.        git checkout f04
+24.        ls
+25.        git rebase f03
+26.        ls
+27.        nano t1.txt
+28.        ls
+29.        git checkout f04
+30.        git add .
+31.        git commit -m "1st commit"
+32.        nano t1.txt 
+33.        git commit -am "2st commit"
+34.        touch t2.txt
+35.        echo "some more line" >> t1.txt 
+36.        git status
+37.        git add .
+38.        git commit -m "3rd commit"
+39.        git checkout master 
+40.        git log f04 --oneline
+41.        git cherry-pick d6aceaf
+42.        ls
+43.        cat sam.txt 
+44.        cat t1.txt 
+45.        git cherry-pick fc7563d
+46.        cat t1.txt 
+47.        git cherry-pick 2fa8ac0
+48.        cat t1.txt 
+49.        cat t2.txt 
+
+
+
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/pradeeshkumar/playEnvo/task/.git/
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ touch sam.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git add .
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -m"Add file to create branch"
+[master f36feec] d
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ 
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch f01
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch f02
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch f03
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch f04
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git branch f05
+
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git checkout f01
+Switched to branch 'f01'
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ touch sam01.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git add .
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -m "sam file created in f01"
+[f01 b619e57] sam file created in f01
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sam01.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git checkout f02
+Switched to branch 'f02'
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ touch sam02.sh
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git add .
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -m "sam file created in f02"
+[f02 397c78e] sam file created in f02
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sam02.sh
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git checkout f03
+Switched to branch 'f03'
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git merge f01
+Updating f36feec..b619e57
+Fast-forward
+ sam01.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sam01.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git log
+commit b619e57bff7386898f41c1546af3be901ac10964 (HEAD -> f03, f01)
+Author: Pradeesh2007 <pradeeshkumar2007@gmail.com>
+Date:   Mon Apr 6 13:01:19 2026 +0530
+
+    sam file created in f01
+
+commit f36feec15826f2a77c34f6634cdbe98e3164c404 (master, f05, f04)
+Author: Pradeesh2007 <pradeeshkumar2007@gmail.com>
+Date:   Mon Apr 6 12:58:21 2026 +0530
+
+    Add file to create branch
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git merge f02
+Merge made by the 'ort' strategy.
+ sam02.sh | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sam02.sh
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ ls
+sam01.txt  sam02.sh  sam.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git checkout f04
+Switched to branch 'f04'
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ ls
+sam.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git rebase f03
+Successfully rebased and updated refs/heads/f04.
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ ls
+sam01.txt  sam02.sh  sam.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ nano t1.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ ls
+sam01.txt  sam.txt  t1.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git checkout f04
+Switched to branch 'f04'
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git add .
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -m "1st commit"
+[f04 d6aceaf] 1st commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 t1.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ nano t1.txt 
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -am "2st commit"
+[f04 fc7563d] 2st commit
+ 1 file changed, 1 insertion(+)
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ touch t2.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ echo "some more line" >> t1.txt 
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git status
+On branch f04
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   t1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git add .
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git commit -m "3rd commit"
+[f04 2fa8ac0] 3rd commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 t2.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git checkout master 
+Switched to branch 'master'
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git log f04 --oneline
+2fa8ac0 (f04) 3rd commit
+fc7563d 2st commit
+d6aceaf 1st commit
+084eab3 (f03) sam file created in f02
+b619e57 (f01) sam file created in f01
+f36feec (HEAD -> master, f05) Add file to create branch
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git cherry-pick d6aceaf
+[master 02a2606] 1st commit
+ Date: Mon Apr 6 13:11:55 2026 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 t1.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ ls
+sam.txt  t1.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ cat sam.txt 
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ cat t1.txt 
+10 commend lines
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git cherry-pick fc7563d
+[master e0bc375] 2st commit
+ Date: Mon Apr 6 13:12:45 2026 +0530
+ 1 file changed, 1 insertion(+)
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ cat t1.txt 
+10 commend lines
+10 commend lines
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ git cherry-pick 2fa8ac0
+[master 9ab7e13] 3rd commit
+ Date: Mon Apr 6 13:13:58 2026 +0530
+ 2 files changed, 1 insertion(+)
+ create mode 100644 t2.txt
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ cat t1.txt 
+10 commend lines
+10 commend lines
+some more line
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$ cat t2.txt 
+┌─[pradeeshkumar@Blackarch ~/playEnvo/task/git]
+└─$
+
+
+
+
+
+
+

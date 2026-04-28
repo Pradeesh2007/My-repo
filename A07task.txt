@@ -1,0 +1,28 @@
+branch f01 f02 f03 f04 f05
+push all the branches to git hub
+
+checkout to master and delete all the branch in local and github
+
+create a07.txt file in master
+
+place any command in 1st line then add and commit 
+
+place any command in 2nd line then add and commit 
+make this both commit  id into one commit id
+
+place any command in 3rd line then move into WIP
+
+use stash pop
+use stash apply
+and delete the stash
+
+create demo.sh,demo.php,demo.py andd it into .gitignore file
+
+create tag and push it to github 
+then delete the tag in local
+
+
+
+
+maven
+ant

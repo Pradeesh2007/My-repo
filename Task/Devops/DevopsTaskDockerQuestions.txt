@@ -1,0 +1,44 @@
+run a docker container with custamize cpu and ram size for nginx
+  docker run -d --cpus=1 --memory=512m --name my-nginx nginx  
+
+docekr run -it cenos:7 /bin/bash // after exit container need to run what is the short cut key
+  Ctrl+P for background process
+  Ctrl+Q to exit the container
+
+chk dockerfile  and use what other commands we left
+  cat Dockerfile - to check the docker file
+
+find the command for after build image need to change the tag 
+  docker tag <image_id_or_old_tag> <new_tag>
+
+what is dangling images?
+  Dangling images in Docker are untagged images
+
+command to list dangling images
+  docker images -f "dangling=true"
+
+what is the default location for docker, can cange the default location ,if yes how?
+  The default location of docker is "/var/lib/docekr". yes, we can change the docekr default location. copy or move the default docker location(/var/lib/docker) to new path, then edit the file "/etc/docker/daemon.json" and set new docker path you moved.
+
+command to export docker image to sample.tar
+  docker save -o sample.tar <image_name>:<tag>
+
+command to find import sample.tar into docker image
+  docker load -i sample.tar
+
+diff b/w docker exec vs docker attach
+  exec - Runs a new command/process inside an already running container.
+  attach - Connects your terminal to the container’s main process.
+
+command to chk the cpu and memory utilization for the container
+  docker stats
+
+using dockerfile -> maven image pull ->maven container build maven war project ->out of .war host into tomcat container
+  FROM maven AS builder
+  WORKDIR /app
+  COPY . .
+  RUN mvn clean install
+  FROM tomcat:9
+  RUN rm -rf /usr/local/tomcat/webapps/*
+  COPY --from=builder /app/target/*.war /usr/local/tomcat/webapps/myapp.war	
+  EXPOSE 8080
