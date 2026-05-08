@@ -4,3 +4,5 @@ Terraform/.terraform/*
 **/terraform.tfstate 
 **/terraform.tfstate.backup
 Terraform/.terraform.lock.hcl
+./swww
+swww
