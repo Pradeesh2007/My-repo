@@ -1,0 +1,68 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Sample statk
+Metadata: {}
+
+Parameters: 
+  mvpccidr:
+    Description: choose the cidr for mvpc
+    Type: String
+    Default: 192.168.24.0/24 
+  msn1cidr:
+    Description: choose the cidr for sn1
+    Type: String
+    Default: 192.168.24.0/28
+  msn1az:
+    Description: choose the availability zone for sn1
+    Type: AWS::EC2::AvailabilityZone::Name
+  msn2cidr:
+    Description: choose the cidr for sn2
+    Type: String
+  msn2az:
+    Description: choose the availability zone for sn2
+    Type: AWS::EC2::AvailabilityZone::Name
+    
+Mappings: {}
+
+Conditions: {} 
+
+Resources: 
+  mvpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref mvpccidr
+      EnableDnsSupport: true
+      Tags:
+        - Key: Name
+          Value: mvpc
+  migw:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: keyname
+          Value: migw
+  AttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref mvpc
+      InternetGatewayId: !Ref migw
+  sn1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref msn1az
+      VpcId: !Ref mvpc
+      MapPublicIpOnLaunch: true
+      CidrBlock: !Ref msn1cidr
+      Tags:
+        - Key: keyname
+          Value: sn1
+  sn2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: !Ref msn2az
+      VpcId: !Ref mvpc
+      CidrBlock: !Ref msn2cidr
+      Tags:
+        - Key: keyname  
+          Value: sn2    
+          
+Outputs: {}

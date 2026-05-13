@@ -6,3 +6,12 @@ Terraform/.terraform/*
 Terraform/.terraform.lock.hcl
 ./swww
 swww
+ansible
+ansible/*
+Terraform/s3/.terraform/*
+Terraform/s3/**/.terraform*
+Terraform/s3/**/terraform.tfstate
+Terraform/s3/**/terraform.tfstate.backup
+Terraform/s3/.terraform.lock.hcl
+mywar
+mywar/*
